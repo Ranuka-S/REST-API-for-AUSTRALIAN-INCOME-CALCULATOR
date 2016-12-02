@@ -14,16 +14,16 @@
 		<param-value>true</param-value>
 	</context-param>
 	
-	<context-param>
-	<param-name>resteasy.resources</param-name>
-	<param-value>com.ranuka.rest.resource.IncomeService</param-value>
-</context-param>
-
-	<!-- this need same with resteasy servlet url-pattern -->
 <!-- 	<context-param>
+	<param-name>resteasy.resources</param-name>
+	<param-value>com.ranuka.rest.Service.IncomeService</param-value>
+</context-param>
+ -->
+	<!-- this need same with resteasy servlet url-pattern -->
+	<context-param>
 	<param-name>resteasy.servlet.mapping.prefix</param-name>
 	<param-value>/AUSTax</param-value>
-	</context-param> -->
+	</context-param>
 	
 
 	<listener>

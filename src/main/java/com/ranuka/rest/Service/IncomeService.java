@@ -1,11 +1,10 @@
-package com.ranuka.rest.resource;
+package com.ranuka.rest.Service;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
-
-
 
 import com.ranuka.rest.model.Income;
 import com.ranuka.util.ausIncomCalculator.IncomeCalculator;
