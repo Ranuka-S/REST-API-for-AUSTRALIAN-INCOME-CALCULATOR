@@ -21,7 +21,7 @@ public class IncomeService {
 	public Response calculateIncome(Income income){
 		
 		double payAfteerTax = incomCal.calculator(income);
-		String response = "your annual take home salary = "+payAfteerTax;
+		String response = "Your annual take home salary = "+payAfteerTax;
 		return Response.status(200).entity(response).build();
 
 	}
