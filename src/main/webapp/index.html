@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
 <head>
+<meta charset="ISO-8859-1">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -17,7 +17,7 @@
 			<option value="MONTHLY">Monthly</option>
 			<option value="ANNUALLY">Annually</option>
 		</select>
-
+<input type="submit" value="test">
 		<button>Calculate my income</button>
 		<br></br><label id="response"></label>
 	</form>
@@ -32,19 +32,18 @@
 			var requestData = JSON.stringify(data);
 
 			$.ajax({
-				url : "/AusIncomeCalculator/AUSTax/post",
+				url : "http://localhost:8080/AusIncomeCalculator/rest/AUSTax/post",
 				type : "POST",
 				data : requestData,
 				contentType : "application/json; charset=utf-8",
 				success : function(responseData) {
 					$('#response').text(responseData);
-				},
-				error : function(responseData, textStatus, errorThrown) {
-					alert("Failed error...dedjfhf" + errorThrown);
 				}
+
 			});
 
 		});
 	</script>
+	<a href="Version2.html">Version2</a>
 </body>
 </html>

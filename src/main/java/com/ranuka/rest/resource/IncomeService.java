@@ -4,13 +4,10 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
-
-
-
 import com.ranuka.rest.model.Income;
 import com.ranuka.util.ausIncomCalculator.IncomeCalculator;
 
-@Path("/AUSTax")
+@Path("/rest/AUSTax")
 public class IncomeService {
 
 	IncomeCalculator incomCal = new IncomeCalculator();
@@ -22,8 +19,8 @@ public class IncomeService {
 		
 		double payAfteerTax = incomCal.calculator(income);
 		String response = "Your annual take home salary = "+payAfteerTax;
-		return Response.status(200).entity(response).build();
+		Response httpResponse = Response.status(200).entity(response).build();
+		return httpResponse;
 
 	}
-
 }
